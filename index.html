@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mx-auto p-4 bg-gray-900 text-white rounded-lg shadow-lg flex flex-wrap pb-0">
+        <div class="music-player w-2/5 p-4  max-[600px]:w-full">
+            <!---- Music player content ---->
+            <div
+                class="cover-container mb-4 pb-0 border-solid border-4 border-[#132a56] rounded-lg transition duration-150 ease-out hover:border-[#18366c] ease-in ">
+                <img src="" alt="Song Cover" class=" shadow-md " id="coverImage">
+            </div>
+            <div class="info-container mb-4">
+                <h1 class="text-3xl font-semibold mb-2 pb-0" id="songTitle"></h1>
+                <p class="text-gray-400" id="artistName"></p>
+            </div>
+            <audio id="audio" class="hidden"></audio>
+            <div class="controls-container flex flex-wrap justify-center items-center">
+                <button id="prevBtn" class="control-btn transition duration-150 ease-out hover:ease-in"><i
+                        class="ri-skip-back-fill"></i></button>
+                <button id="playBtn" class="control-btn transition duration-150 ease-out hover:ease-in">Play</button>
+                <button id="nextBtn" class="control-btn transition duration-150 ease-out hover:ease-in"><i
+                        class="ri-skip-forward-fill"></i></button>
+                <button id="muteBtn" class="control-btn transition duration-150 ease-out hover:ease-in">Mute</button>
+            </div>
+        </div>
+        <div class="song-list w-3/5 pl-8 overflow-y-auto max-[600px]:w-full">
+            <h1 class="text-xl font-semibold">ALL Songs</h1>
+            <ul class="playlist">
+                <!-- Add list items dynamically using JS --->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
